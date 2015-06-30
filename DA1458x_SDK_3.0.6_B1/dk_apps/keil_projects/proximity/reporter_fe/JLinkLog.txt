@@ -1,0 +1,23 @@
+
+T2BC0 001:691 SEGGER J-Link V4.40c Log File (0000ms, 1461ms total)
+T2BC0 001:691 DLL Compiled: Jan 24 2012 09:30:33 (0000ms, 1461ms total)
+T2BC0 001:691 Logging started @ 2015-04-02 21:04 (0000ms, 1461ms total)
+T2BC0 001:691 JLINK_SetWarnOutHandler(...) (0000ms, 1461ms total)
+T2BC0 001:691 JLINK_OpenEx(...)
+Firmware: J-Link ARM V8 compiled Dec  6 2011 18:57:44
+Hardware: V8.00
+S/N: 308622869
+Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFULL  returns O.K. (1023ms, 1461ms total)
+T2BC0 002:714 JLINK_SetErrorOutHandler(...) (0000ms, 2484ms total)
+T2BC0 002:715 JLINK_ExecCommand("Device = DA14580", ...)  returns 0x00 (0000ms, 2484ms total)
+T2BC0 002:715 JLINK_ExecCommand("ProjectFile = "E:\Project\DA1458x_SDK_3.0.6\dk_apps\keil_projects\proximity\reporter_fe\JLinkSettings.ini"", ...)  returns 0x00 (0005ms, 2484ms total)
+T2BC0 002:720 JLINK_ExecCommand("DisableConnectionTimeout", ...)  returns 0x00 (0000ms, 2489ms total)
+T2BC0 002:720 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0006ms, 2489ms total)
+T2BC0 002:726 JLINK_SetSpeed(2000) (0001ms, 2495ms total)
+T2BC0 002:727 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 2496ms total)
+T2BC0 002:727 JLINK_GetDLLVersion()  returns 44003 (0000ms, 2496ms total)
+T2BC0 002:727 JLINK_GetFirmwareString(...) (0000ms, 2496ms total)
+T2BC0 002:727 JLINK_GetDLLVersion()  returns 44003 (0000ms, 2496ms total)
+T2BC0 002:727 JLINK_GetCompileDateTime() (0000ms, 2496ms total)
+T2BC0 002:727 JLINK_GetFirmwareString(...) (0000ms, 2496ms total)
+T2BC0 002:727 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 2496ms total)

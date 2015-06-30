@@ -1,0 +1,31 @@
+
+T2358 001:740 SEGGER J-Link V4.40c Log File (0000ms, 1481ms total)
+T2358 001:740 DLL Compiled: Jan 24 2012 09:30:33 (0000ms, 1481ms total)
+T2358 001:740 Logging started @ 2015-04-02 17:35 (0000ms, 1481ms total)
+T2358 001:740 JLINK_SetWarnOutHandler(...) (0000ms, 1481ms total)
+T2358 001:740 JLINK_OpenEx(...)
+Firmware: J-Link ARM V8 compiled Dec  6 2011 18:57:44
+Hardware: V8.00
+S/N: 308622869
+Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFULL  returns O.K. (1023ms, 1481ms total)
+T2358 002:763 JLINK_SetErrorOutHandler(...) (0000ms, 2504ms total)
+T2358 002:764 JLINK_ExecCommand("Device = DA14580", ...)  returns 0x00 (0000ms, 2504ms total)
+T2358 002:764 JLINK_ExecCommand("ProjectFile = "E:\Project\DA1458x_SDK_3.0.6\host_apps\da1458x\proximity\reporter\JLinkSettings.ini"", ...)  returns 0x00 (0005ms, 2504ms total)
+T2358 002:769 JLINK_ExecCommand("DisableConnectionTimeout", ...)  returns 0x00 (0000ms, 2509ms total)
+T2358 002:769 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0006ms, 2509ms total)
+T2358 002:775 JLINK_SetSpeed(2000) (0001ms, 2515ms total)
+T2358 002:776 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 2516ms total)
+T2358 002:776 JLINK_GetDLLVersion()  returns 44003 (0000ms, 2516ms total)
+T2358 002:776 JLINK_GetFirmwareString(...) (0000ms, 2516ms total)
+T2358 002:776 JLINK_GetDLLVersion()  returns 44003 (0000ms, 2516ms total)
+T2358 002:776 JLINK_GetCompileDateTime() (0000ms, 2516ms total)
+T2358 002:776 JLINK_GetFirmwareString(...) (0000ms, 2516ms total)
+T2358 002:776 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 2516ms total)
+T2358 002:777 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)  returns JLINKARM_RESET_TYPE_NORMAL (0000ms, 2516ms total)
+T2358 002:777 JLINK_Reset() >0x108 TIF>Found SWD-DP with ID 0x0BB11477 >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x35 TIF> >0x35 TIF> >0x35 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF>  FPUnit: 4 code (BP) slots and 0 literal slots >0x35 TIF> >0x33 TIF>
+ >0x33 TIF> >0x35 TIF> >0x35 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF> >0x35 TIF> >0x33 TIF> >0x33 TIF>Found Cortex-M0 r0p0, Little endian. (0066ms, 2516ms total)
+T2358 002:843 JLINK_GetId() >0x33 TIF>  returns 0x0BB11477 (0002ms, 2582ms total)
+T2358 002:880 JLINK_GetFirmwareString(...) (0000ms, 2584ms total)
+T2358 003:869 JLINK_Close() (0127ms, 2584ms total)
+T2358 003:996 JLINK_Close() (0000ms, 2711ms total)
+T2358 003:998 JLINK_Close() (0000ms, 2711ms total)
