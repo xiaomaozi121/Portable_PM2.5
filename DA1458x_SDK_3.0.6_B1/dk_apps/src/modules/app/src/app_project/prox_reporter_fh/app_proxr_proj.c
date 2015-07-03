@@ -843,7 +843,7 @@ int app_adv_timer_handler(ke_msg_id_t const msgid,
     
     app_ble_ext_wakeup_on();
     app_button_enable();
-	
+		flag_Connect=0;
     return (KE_MSG_CONSUMED);
 }
 

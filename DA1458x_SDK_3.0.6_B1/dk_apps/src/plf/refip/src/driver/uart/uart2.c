@@ -189,7 +189,7 @@ static void user_uart2_rec_data_avail_isr(void)
 		if(uart_buf[0]==0x55)
 		{
 				uart_bufcnt++;
-				if(uart_bufcnt==5 )
+				if(uart_bufcnt>=5 )
 				{		
 						uart_bufcnt=0;
 						if(uart_buf[4]==0xAA)
@@ -209,7 +209,7 @@ static void user_uart2_rec_data_avail_isr(void)
 								flag_PM25=1;
 								periph_init();
 								
-								GPIO_SetActive(LASER_STATE_PORT,LASER_STATE_PIN);
+								//GPIO_SetActive(LASER_STATE_PORT,LASER_STATE_PIN);
 								
 								SetBits16(SYS_CTRL_REG, PAD_LATCH_EN, 1);
 								

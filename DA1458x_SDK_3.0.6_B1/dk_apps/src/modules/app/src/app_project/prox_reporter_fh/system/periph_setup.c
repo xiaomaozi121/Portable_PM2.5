@@ -169,7 +169,7 @@ void periph_init(void)  // set i2c, spi, uart, uart2 serial clks
 		Prameter[10]=0xAA;
 #endif
 		//GPIO_SetActive(LASER_STATE_PORT,LASER_STATE_PIN);
-
+		
 		if(flag_PM25)
 		{
 				GPIO_SetActive(LASER_STATE_PORT,LASER_STATE_PIN);
@@ -183,6 +183,7 @@ void periph_init(void)  // set i2c, spi, uart, uart2 serial clks
 					uart2_rec_data_avail_setf(1); 
 				#endif
 		}
+		//GPIO_SetInactive(LASER_STATE_PORT,LASER_STATE_PIN);
 		if(!flag_Uart2_Init)
 		{
 				flag_Uart2_Init=1;

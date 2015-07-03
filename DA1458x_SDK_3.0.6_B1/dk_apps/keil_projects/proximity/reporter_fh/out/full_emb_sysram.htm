@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\out\full_emb_sysram.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\out\full_emb_sysram.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050041: Last Updated: Fri Jun 26 16:04:47 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050041: Last Updated: Thu Jul 02 19:37:39 2015
 <BR><P>
 <H3>Maximum Stack Usage =        328 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -173,10 +173,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[19d]"></a>get_patching_spota_length</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rom_symdef.txt(ABSOLUTE))
-<BR><BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr (via Veneer)
-<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_read_mem (via Veneer)
+<BR><BR>[Called By]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_read_mem (via Veneer)
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spotar_gpio_map_ind_handler (via Veneer)
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_exec_patch (via Veneer)
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr (via Veneer)
 </UL>
 
 <P><STRONG><a name="[16]"></a>ADC_Handler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rom_symdef.txt(ABSOLUTE), UNUSED)
@@ -931,7 +931,7 @@ Global Symbols
 <P><STRONG><a name="[1a4]"></a>__aeabi_llsl</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rom_symdef.txt(ABSOLUTE))
 <BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetInactive (via Veneer)
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetActive (via Veneer)
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPinStatus (via Veneer)
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPinStatus (via Veneer)
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ConfigurePin (via Veneer)
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_init (via Veneer)
 <LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetPinFunction (via Veneer)
@@ -1021,7 +1021,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> jump_table.o(jump_table_mem_area)
 </UL>
 <P><STRONG><a name="[1e]"></a>main_func</STRONG> (Thumb, 562 bytes, Stack size 16 bytes, arch_main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = main_func &rArr; periph_init &rArr; set_pad_functions &rArr; GPIO_ConfigurePin &rArr; GPIO_SetPinFunction
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = main_func &rArr; periph_init &rArr; set_pad_functions &rArr; GPIO_ConfigurePin &rArr; GPIO_SetPinFunction
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_rxdone (via Veneer)
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;srand (via Veneer)
@@ -1113,14 +1113,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;periph_init
 </UL>
 
-<P><STRONG><a name="[9a]"></a>periph_init</STRONG> (Thumb, 156 bytes, Stack size 8 bytes, periph_setup.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = periph_init &rArr; set_pad_functions &rArr; GPIO_ConfigurePin &rArr; GPIO_SetPinFunction
+<P><STRONG><a name="[9a]"></a>periph_init</STRONG> (Thumb, 190 bytes, Stack size 24 bytes, periph_setup.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = periph_init &rArr; set_pad_functions &rArr; GPIO_ConfigurePin &rArr; GPIO_SetPinFunction
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart2_init
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart2_init
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_button_enable
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetInactive
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetActive
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPinStatus
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPinStatus
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_pad_functions
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;patch_func
 </UL>
@@ -1501,10 +1501,10 @@ Global Symbols
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_flash_page_program
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_set_image_valid_flag
+<BR>[Called By]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_set_image_valid_flag
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
 <LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_read_image_headers
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[e8]"></a>spi_flash_power_down</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, spi_flash.o(.text), UNUSED)
@@ -1648,8 +1648,8 @@ Global Symbols
 <P><STRONG><a name="[1a7]"></a>i2c_eeprom_init</STRONG> (Thumb, 76 bytes, Stack size 20 bytes, i2c_eeprom.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = i2c_eeprom_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[199]"></a>i2c_eeprom_release</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, i2c_eeprom.o(.text))
@@ -1712,9 +1712,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_eeprom_write_page
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
 <LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_read_image_headers
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[f8]"></a>uart2_write_func</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, uart2.o(.text))
@@ -1749,10 +1749,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart2_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart2_init
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart2_init
 </UL>
 
-<P><STRONG><a name="[bb]"></a>uart2_init</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, uart2.o(.text))
+<P><STRONG><a name="[ba]"></a>uart2_init</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, uart2.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = uart2_init &rArr; uart2_init_func
 </UL>
 <BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart2_init_func
@@ -1938,7 +1938,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> jump_table.o(jump_table_mem_area)
 </UL>
 <P><STRONG><a name="[6]"></a>BLE_WAKEUP_LP_Handler</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, rwble.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = BLE_WAKEUP_LP_Handler &rArr; periph_init &rArr; set_pad_functions &rArr; GPIO_ConfigurePin &rArr; GPIO_SetPinFunction
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = BLE_WAKEUP_LP_Handler &rArr; periph_init &rArr; set_pad_functions &rArr; GPIO_ConfigurePin &rArr; GPIO_SetPinFunction
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;periph_init
 </UL>
@@ -2407,7 +2407,7 @@ Global Symbols
 <P><STRONG><a name="[b7]"></a>app_button_enable</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, app_proxr_proj.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = app_button_enable &rArr; wkupct_enable_irq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPinStatus
+<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPinStatus
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wkupct_register_callback
 <LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wkupct_enable_irq
 </UL>
@@ -2416,8 +2416,8 @@ Global Symbols
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_adv_timer_handler
 </UL>
 
-<P><STRONG><a name="[62]"></a>app_button_press_cb</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, app_proxr_proj.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = app_button_press_cb &rArr; periph_init &rArr; set_pad_functions &rArr; GPIO_ConfigurePin &rArr; GPIO_SetPinFunction
+<P><STRONG><a name="[62]"></a>app_button_press_cb</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, app_proxr_proj.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = app_button_press_cb &rArr; periph_init &rArr; set_pad_functions &rArr; GPIO_ConfigurePin &rArr; GPIO_SetPinFunction
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_button_enable
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_ble_ext_wakeup_get
@@ -2635,7 +2635,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapc_bond_req_ind_handler
 </UL>
 
-<P><STRONG><a name="[8c]"></a>app_adv_timer_handler</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, app_proxr_proj.o(.text))
+<P><STRONG><a name="[8c]"></a>app_adv_timer_handler</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, app_proxr_proj.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = app_adv_timer_handler &rArr; app_button_enable &rArr; wkupct_enable_irq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_button_enable
@@ -2711,9 +2711,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[19e]"></a>app_spotar_reset</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, app_spotar.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_read_mem
+<BR><BR>[Called By]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_read_mem
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spotar_patch_len_ind_handler
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[195]"></a>app_spotar_create_db</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, app_spotar.o(.text))
@@ -2740,13 +2740,13 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_send (via Veneer)
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_alloc (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_read_mem
+<BR>[Called By]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_read_mem
 <LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_start
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spotar_patch_len_ind_handler
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spotar_patch_data_ind_handler
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spotar_gpio_map_ind_handler
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[198]"></a>app_spotar_stop</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, app_spotar.o(.text))
@@ -2755,8 +2755,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_eeprom_release
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_release
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_read_mem
+<BR>[Called By]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_read_mem
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[19a]"></a>app_set_image_valid_flag</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, app_spotar.o(.text))
@@ -2796,10 +2796,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_send (via Veneer)
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_msg_alloc (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spotar_patch_mem_dev_ind_handler
+<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spotar_patch_mem_dev_ind_handler
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spotar_gpio_map_ind_handler
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[1a1]"></a>app_spi_flash_init</STRONG> (Thumb, 58 bytes, Stack size 32 bytes, app_spotar.o(.text))
@@ -2809,8 +2809,8 @@ Global Symbols
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_read_flash_memory_man_and_dev_id
 <LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_flash_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[1a3]"></a>app_spotar_spi_config</STRONG> (Thumb, 356 bytes, Stack size 24 bytes, app_spotar.o(.text))
@@ -2819,8 +2819,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ConfigurePin
 <LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[1a5]"></a>app_spotar_i2c_config</STRONG> (Thumb, 224 bytes, Stack size 24 bytes, app_spotar.o(.text))
@@ -2829,8 +2829,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ConfigurePin
 <LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
-<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 
 <P><STRONG><a name="[1a6]"></a>app_spotar_pd_hdlr</STRONG> (Thumb, 286 bytes, Stack size 40 bytes, app_spotar.o(.text))
@@ -2883,11 +2883,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp (via Veneer)
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_eeprom_write_data
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_flash_write_data
-<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_get_image_id
-<LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_erase_flash_sectors
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset (via Veneer)
 <LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_read_ext_mem
 <LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_find_old_img
+<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_get_image_id
+<LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_erase_flash_sectors
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
 </UL>
@@ -2926,9 +2926,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = spotar_patch_data_ind_handler &rArr; app_spotar_img_hdlr &rArr; app_read_image_headers &rArr; spi_flash_write_data &rArr; spi_flash_page_program &rArr; spi_flash_set_write_enable &rArr; spi_flash_wait_till_ready &rArr; spi_flash_read_status_reg &rArr; spi_transaction &rArr; spi_cs_low &rArr; GPIO_SetInactive
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy (via Veneer)
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spotar_send_status_update_req
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_img_hdlr
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_pd_hdlr
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app_task.o(.constdata)
 </UL>
@@ -3035,7 +3035,7 @@ Global Symbols
 <LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_spotar_spi_config
 </UL>
 
-<P><STRONG><a name="[ba]"></a>GPIO_GetPinStatus</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, gpio.o(i.GPIO_GetPinStatus))
+<P><STRONG><a name="[bb]"></a>GPIO_GetPinStatus</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, gpio.o(i.GPIO_GetPinStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GPIO_GetPinStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl (via Veneer)
@@ -3143,7 +3143,7 @@ Local Symbols
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart2_write_func
 </UL>
 
-<P><STRONG><a name="[fb]"></a>user_uart2_rec_data_avail_isr</STRONG> (Thumb, 246 bytes, Stack size 16 bytes, uart2.o(.text))
+<P><STRONG><a name="[fb]"></a>user_uart2_rec_data_avail_isr</STRONG> (Thumb, 238 bytes, Stack size 16 bytes, uart2.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = user_uart2_rec_data_avail_isr &rArr; app_adv_start &rArr; app_adv_func &rArr; app_timer_set
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetActive
